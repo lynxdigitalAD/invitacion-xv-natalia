@@ -833,14 +833,22 @@ body.envelope-assets-ready .envelope-art {
 }
 
 .cash-gift {
-  padding: clamp(14px, 4vw, 32px) 0;
+  width: calc(100% + clamp(40px, 10vw, 160px));
+  max-width: none;
+  margin-inline: calc(0px - clamp(20px, 5vw, 80px));
+  padding: clamp(14px, 3vw, 24px) 0 0;
+  background: none;
+}
+
+.cash-gift + .rsvp {
+  padding-top: 0;
 }
 
 .cash-gift-image {
   display: block;
   width: 100%;
+  max-width: none;
   height: auto;
-  object-fit: contain;
 }
 
 .maps::before {
@@ -1208,6 +1216,11 @@ body.envelope-assets-ready .envelope-art {
 @media (max-width: 560px) {
   .invitation {
     padding-inline: 22px;
+  }
+
+  .cash-gift {
+    width: calc(100% + 44px);
+    margin-inline: -22px;
   }
 
   .map-tabs {
